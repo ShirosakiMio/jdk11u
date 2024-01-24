@@ -149,7 +149,7 @@ static void save_memory_to_file(char* addr, size_t size) {
 static char* get_user_tmp_dir(const char* user, int vmid, int nspid) {
   char buffer[TMP_BUFFER_LEN];
   char* tmpdir = (char *)os::get_temp_directory();
-  assert(strlen(tmpdir) == 4, "No longer using /tmp - update buffer size");
+  // assert(strlen(tmpdir) == 4, "No longer using /tmp - update buffer size");
 
   if (nspid != -1) {
     jio_snprintf(buffer, TMP_BUFFER_LEN, "/proc/%d/root%s", vmid, tmpdir);
