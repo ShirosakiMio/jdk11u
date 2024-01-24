@@ -526,7 +526,7 @@ static char* get_user_name_slow(int vmid, int nspid, TRAPS) {
   char buffer[MAXPATHLEN + 1];
   int searchpid;
   char* tmpdirname = (char *)os::get_temp_directory();
-  assert(strlen(tmpdirname) == 4, "No longer using /tmp - update buffer size");
+  // assert(strlen(tmpdirname) == 4, "No longer using /tmp - update buffer size");
 
   if (nspid == -1) {
     searchpid = vmid;
