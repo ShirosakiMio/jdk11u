@@ -4151,7 +4151,10 @@ InitializeNode::coalesce_subword_stores(intptr_t header_size,
         adr = make_raw_address(offset, phase);
         off[nst]  = offset;
         int a = nst++;
-        printf("ptr:%p nst:%d\n", st[a], a);
+        if (a > 1)
+        {
+          a = 1;
+        }
         st[a] = StoreNode::make(*phase, ctl, zmem, adr, atp,
                                 phase->intcon(con1), T_INT, MemNode::unordered);
       }
