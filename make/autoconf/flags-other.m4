@@ -58,7 +58,7 @@ AC_DEFUN([FLAGS_SETUP_STRIPFLAGS],
   elif test "x$OPENJDK_TARGET_OS" = xaix; then
     STRIPFLAGS="-X32_64"
   fi
-  STRIPFLAGS="-g"
+
   AC_SUBST(STRIPFLAGS)
 ])
 
